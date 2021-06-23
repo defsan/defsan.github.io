@@ -38,6 +38,21 @@ function purchase(price) {
   fbq('track', 'Purchase', params);
 }
 
+function view(id) {
+  fbq('track', 'ViewContent', {
+    content_ids: [id],
+    content_type: 'product'
+  });
+}
+
+function add(id) {
+  fbq('track', 'AddToCart', {
+    content_ids: [id],
+    content_type: 'product'
+  });
+}
+
+
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
