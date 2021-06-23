@@ -1,3 +1,5 @@
+const NOT_A_STAFF_ID = 'ysb10vkxrd';
+const SUPER_WAND_ID = 'bl51q0kcpq'; 
 function _triggerEvents() {
   var value = Math.floor(Math.random() * Math.floor(100));
   var params = {
