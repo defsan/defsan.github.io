@@ -27,16 +27,14 @@ function _triggerEvents() {
 function purchase(price) {
     let params = {
       value: price,
+      quantity: 1,
       currency: 'USD',
-      contents: [
-        {
-          id: '101',
-          quantity: 1
-        }],
       compared_product: 'recommended-banner-shoes',  // custom property
       content_type: 'product',
       delivery_category: 'in_store'
     };
+  fbq('track', 'ViewContent', params, {eventID: new Date()});
+  fbq('track', 'AddToCart', params);
   fbq('track', 'Purchase', params);
 }
 
