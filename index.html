@@ -1,0 +1,28 @@
+<html>
+  <div id="main"></div>
+  <script src="pixel.js"></script>
+  <script>
+    var value = Math.floor(Math.random() * Math.floor(100));
+    var params = {
+      value: value,
+      currency: 'USD',
+      contents: [
+        {
+          id: '101',
+          quantity: 1
+        },
+        {
+          id: '102',
+          quantity: 2
+        }],
+      compared_product: 'recommended-banner-shoes',  // custom property
+      content_type: 'product',
+      delivery_category: 'in_store'
+    };
+    fbq('track', 'Purchase', params);
+    fbq('track', 'AddToCart', params);
+    fbq('track', 'ViewContent', params, {eventID: new Date()});
+    fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
+    document.getElementById("main").innerHTML = "Triggered";
+  </script>
+</html>
