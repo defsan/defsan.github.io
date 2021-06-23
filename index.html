@@ -27,6 +27,9 @@
       fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
       document.getElementById("main").innerHTML = "Triggered";
     }
+    
+    view(NOT_A_STAFF_ID);
+    view(SUPER_WAND_ID);
   </script>
 </head>
 <body>
@@ -36,11 +39,11 @@
   <ul>
     <li>
         <h1 id="super_wand">Super Wand 2000 - $299.00</h1>
-        <button id="super_wand_btn" onclick="purchase(299.99); return false;">Buy</button>
+        <button id="super_wand_btn" onclick="add(SUPER_WAND_ID); purchase(SUPER_WAND_ID, 299.99); return false;">Buy</button>
     </li>
     <li>
         <h1 id="not_a_staff">Not a staff - $399.00</h1>
-        <button id="not_a_staff_btn" onclick="purchase(399.99); return false;">Buy</button>
+        <button id="not_a_staff_btn" onclick="add(NOT_A_STAFF_ID); purchase(NOT_A_STAFF_ID, 399.99); return false;">Buy</button>
     </li>
   </ul>
 </body>
