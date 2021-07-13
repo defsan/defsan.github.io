@@ -27,8 +27,11 @@
       document.getElementById("main").innerHTML = "Triggered";
     }
     
-    view(NOT_A_STAFF_ID);
-    view(SUPER_WAND_ID);
+//     view(NOT_A_STAFF_ID);
+//     view(SUPER_WAND_ID);
+    view(SUPER_DUPER_CLOAK_ID);
+    view(RAINBOW_JACKET_ID);
+    view(VERY_DARK_CLOAK_ID);
   </script>
 </head>
 <body>
@@ -36,6 +39,7 @@
   <div id="main"></div>
   <button onclick="triggerEvents(); return false;">Trigger</button>
   <ul>
+    <!--
     <li>
         <h1 id="super_wand">Super Wand 2000 - $299.00</h1>
         <button id="super_wand_btn" onclick="add(SUPER_WAND_ID); purchase(SUPER_WAND_ID, 299.99); return false;">Buy</button>
@@ -43,6 +47,19 @@
     <li>
         <h1 id="not_a_staff">Not a staff - $399.00</h1>
         <button id="not_a_staff_btn" onclick="add(NOT_A_STAFF_ID); purchase(NOT_A_STAFF_ID, 399.99); return false;">Buy</button>
+    </li>
+    -->
+    <li>
+        <h1 id="super_duper_cloak">Super Duper Cloak - $229.00</h1>
+        <button id="super_duper_btn" onclick="add(SUPER_DUPER_CLOAK_ID); purchase(SUPER_DUPER_CLOAK_ID, 229.99); return false;">Buy</button>
+    </li>
+    <li>
+        <h1 id="rainbow_jacket">Rainbow Trail Jacket - $599.00</h1>
+        <button id="rainbow_jacket_btn" onclick="add(RAINBOW_JACKET_ID); purchase(RAINBOW_JACKET_ID, 529.99); return false;">Buy</button>
+    </li>
+    <li>
+        <h1 id="very_dark_cloak">Very Dark Cloak - $129.00</h1>
+        <button id="very_dark_cloak_btn" onclick="add(VERY_DARK_CLOAK_ID); purchase(VERY_DARK_CLOAK_ID, 129.99); return false;">Buy</button>
     </li>
   </ul>
 </body>
