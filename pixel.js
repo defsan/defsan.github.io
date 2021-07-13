@@ -1,5 +1,10 @@
 const NOT_A_STAFF_ID = 'ysb10vkxrd';
-const SUPER_WAND_ID = 'bl51q0kcpq'; 
+const SUPER_WAND_ID = 'bl51q0kcpq';
+
+const SUPER_DUPER_CLOAK_ID = 'hzwhw8sipq';
+const RAINBOW_JACKET_ID = 'd5cscjpq1f';
+const VERY_DARK_CLOAK_ID = 'fddalldwsf';
+
 function _triggerEvents() {
   var value = Math.floor(Math.random() * Math.floor(100));
   var params = {
@@ -52,8 +57,9 @@ function add(id) {
     content_type: 'product'
   });
 }
-
-
+// Consolidated id
+const OLD_PIXEL_ID='520509209187583';
+const CONSOLIDATED_PIXEL_ID='350298423270506';
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -62,7 +68,5 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '520509209187583');
+fbq('init', CONSOLIDATED_PIXEL_ID);
 fbq('track', 'PageView');
-
-
