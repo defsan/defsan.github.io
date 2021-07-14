@@ -12,11 +12,11 @@ function _triggerEvents() {
     currency: 'USD',
     contents: [
       {
-        id: '101',
+        id: SUPER_DUPER_CLOAK_ID,
         quantity: 1
       },
       {
-        id: '102',
+        id: VERY_DARK_CLOAK_ID,
         quantity: 2
       }],
     compared_product: 'recommended-banner-shoes',  // custom property
