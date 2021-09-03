@@ -1,38 +1,10 @@
 // Consolidated id
-const CONSOLIDATED_PIXEL_ID='350298423270506';
-const CONSOLIDATED_OES_ID='353100003048739';
+const CONSOLIDATED_PIXEL_ID='1165402817288767';
+const CONSOLIDATED_OES_ID='578133580052719';
 
-const NOT_A_STAFF_ID = 'ysb10vkxrd';
-const SUPER_WAND_ID = 'bl51q0kcpq';
-
-const SUPER_DUPER_CLOAK_ID = 'hzwhw8sipq';
-const RAINBOW_JACKET_ID = 'd5cscjpq1f';
-const VERY_DARK_CLOAK_ID = 'fddalldwsf';
-
-function _triggerEvents() {
-  var value = Math.floor(Math.random() * Math.floor(100));
-  var params = {
-    value: value,
-    currency: 'USD',
-    contents: [
-      {
-        id: SUPER_DUPER_CLOAK_ID,
-        quantity: 1
-      },
-      {
-        id: VERY_DARK_CLOAK_ID,
-        quantity: 2
-      }],
-    compared_product: 'recommended-banner-shoes',  // custom property
-    content_type: 'product',
-    delivery_category: 'in_store'
-  };
-  fbq('track', 'Purchase', params);
-  fbq('track', 'AddToCart', params);
-  fbq('track', 'ViewContent', params, {eventID: new Date()});
-  fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
-  document.getElementById("main").innerHTML = "Triggered";
-}
+const PRODUCT1_ID = 'DB_1';
+const PRODUCT2_ID = 'DB_2';
+const PRODUCT3_ID = 'DB_3';
 
 
 function purchase(id, price) {
