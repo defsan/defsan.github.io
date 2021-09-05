@@ -1,0 +1,41 @@
+<html>
+<head>
+  <script src="dogfooding_setup.js"></script>
+  <script>
+    function triggerEvents(product_id) {
+      var value = Math.floor(Math.random() * Math.floor(100));
+      var params = {
+        value: value,
+        currency: 'USD',
+        contents: [
+          {
+            id: product_id,
+            quantity: 1
+          }],
+        compared_product: 'recommended-banner-shoes',  // custom property
+        content_type: 'product',
+        delivery_category: 'in_store'
+      };
+      fbq('track', 'Purchase', params);
+      fbq('track', 'AddToCart', params);
+      fbq('track', 'ViewContent', params, {eventID: new Date()});
+      fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
+      document.getElementById("main").innerHTML = "Triggered";
+    }
+
+    init(CONSOLIDATED_PIXEL_ID);
+    view(PRODUCT1_ID);
+    view(PRODUCT2_ID);
+    view(PRODUCT3_ID);
+    
+    
+  </script>
+</head>
+<body>
+  <h1>This is not a real Dogfood.</h1>
+  <div id="main"></div>
+  <button onclick="triggerEvents(PRODUCT1_ID); return false;">Trigger Product 1</button>
+  <button onclick="triggerEvents(PRODUCT2_ID); return false;">Trigger Product 2</button>
+  <button onclick="triggerEvents(PRODUCT3_ID); return false;">Trigger Product 3</button>
+</body>
+</html>
