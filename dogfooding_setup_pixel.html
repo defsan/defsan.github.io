@@ -20,7 +20,7 @@
       fbq('track', 'AddToCart', params);
       fbq('track', 'ViewContent', params, {eventID: new Date()});
       fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
-      document.getElementById("main").innerHTML = "Triggered";
+      document.getElementById("main").innerHTML += "Triggered</br>";
     }
 
     init(CONSOLIDATED_PIXEL_ID);
@@ -33,9 +33,10 @@
 </head>
 <body>
   <h1>This is not a real Dogfood.</h1>
-  <div id="main"></div>
   <button onclick="triggerEvents(PRODUCT1_ID); return false;">Trigger Product 1</button>
   <button onclick="triggerEvents(PRODUCT2_ID); return false;">Trigger Product 2</button>
   <button onclick="triggerEvents(PRODUCT3_ID); return false;">Trigger Product 3</button>
+  <div id="main"></div>
+
 </body>
 </html>
