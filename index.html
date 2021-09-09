@@ -2,39 +2,6 @@
 <head>
   <meta name="facebook-domain-verification" content="1vbd782xd1v2caneq2jif2ssxbwouy" />
   <script src="pixel.js"></script>
-  <script>
-    function triggerEvents() {
-      var value = Math.floor(Math.random() * Math.floor(100));
-      var params = {
-        value: value,
-        currency: 'USD',
-        contents: [
-          {
-            id: '4155020881284645',
-            quantity: 1
-          },
-          {
-            id: RAINBOW_JACKET_ID,
-            quantity: 2
-          }],
-        compared_product: 'recommended-banner-shoes',  // custom property
-        content_type: 'product',
-        delivery_category: 'in_store'
-      };
-      fbq('track', 'Purchase', params);
-      fbq('track', 'AddToCart', params);
-      fbq('track', 'ViewContent', params, {eventID: new Date()});
-      fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
-      document.getElementById("main").innerHTML = "Triggered";
-    }
-    
-//     view(NOT_A_STAFF_ID);
-//     view(SUPER_WAND_ID);
-    view(SUPER_DUPER_CLOAK_ID);
-    view(RAINBOW_JACKET_ID);
-    view(VERY_DARK_CLOAK_ID);
-    document.getElementById('pixel_id').innerHTML = CONSOLIDATED_OES_ID;
-  </script>
 </head>
 <body>
   <h1>Tracking pixel</h1>
@@ -68,5 +35,38 @@
         <button id="very_dark_cloak_btn" onclick="purchase(VERY_DARK_CLOAK_ID, 129.99); return false;">Purchase</button>
     </li>
   </ul>
+  <script>
+    function triggerEvents() {
+      var value = Math.floor(Math.random() * Math.floor(100));
+      var params = {
+        value: value,
+        currency: 'USD',
+        contents: [
+          {
+            id: '4155020881284645',
+            quantity: 1
+          },
+          {
+            id: RAINBOW_JACKET_ID,
+            quantity: 2
+          }],
+        compared_product: 'recommended-banner-shoes',  // custom property
+        content_type: 'product',
+        delivery_category: 'in_store'
+      };
+      fbq('track', 'Purchase', params);
+      fbq('track', 'AddToCart', params);
+      fbq('track', 'ViewContent', params, {eventID: new Date()});
+      fbq('trackCustom', 'ACustomEvent', {custom_param: 'custom_value'});
+      document.getElementById("main").innerHTML = "Triggered";
+    }
+    
+//     view(NOT_A_STAFF_ID);
+//     view(SUPER_WAND_ID);
+    view(SUPER_DUPER_CLOAK_ID);
+    view(RAINBOW_JACKET_ID);
+    view(VERY_DARK_CLOAK_ID);
+    document.getElementById('pixel_id').innerHTML = CONSOLIDATED_OES_ID;
+  </script>  
 </body>
 </html>
