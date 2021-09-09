@@ -71,4 +71,3 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', CONSOLIDATED_OES_ID);
 fbq('track', 'PageView');
-document.getElementById('pixel_id').innerHTML = CONSOLIDATED_OES_ID;
